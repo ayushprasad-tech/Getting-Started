@@ -6,16 +6,15 @@ int main() {
     cout<<"Enter the Number: ";
     cin>>n;
 
-    int f=1;
-
-    for(int i=n/2;i>=1;i--) {
+    bool flag = true;  //true means number is prime
+    for(int i=2;i<=n/2;i++) {
 
         if(n%i==0) {
-            f++;
+            flag = false;  //number is composite
+            break;
         }
-
     }
 
-    if(f>2) cout<<"The number is composit number.";
-    else cout<<"The number is prime";
+    if(flag == true) cout<<"Number is Prime";
+    else cout<<"Number is composite";
 }
