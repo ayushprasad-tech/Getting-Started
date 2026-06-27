@@ -1,11 +1,16 @@
 #include <iostream>
 using namespace std;
-void sum(int n){
-       
+void sum(int n, int s){
+    if(n==0){
+        cout<<s;
+         return;
+    }
+    sum(n-1,s+n);
+    return;
 }
 int main(){
     int n;
     cout<<"Enter the 'n' : ";
     cin>>n;
-    sum(n);
+    sum(n,0);
 }
